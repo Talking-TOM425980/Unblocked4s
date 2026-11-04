@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unblocked 4s Hub - Verified Embed Edition</title>
+    <title>Unblocked 4s Hub - Classroom 6x Edition</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Theme Palettes */
         :root {
             --bg-primary: #0f172a;
             --bg-secondary: #1e293b;
@@ -15,6 +16,31 @@
             --text-muted: #94a3b8;
             --success: #22c55e;
             --card-hover: #334155;
+            --border-color: #334155;
+        }
+
+        body.theme-neon {
+            --bg-primary: #050505;
+            --bg-secondary: #121212;
+            --accent: #00ffcc;
+            --accent-hover: #00cc99;
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+            --success: #00ff66;
+            --card-hover: #1f1f1f;
+            --border-color: #222222;
+        }
+
+        body.theme-light {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --success: #16a34a;
+            --card-hover: #f1f5f9;
+            --border-color: #cbd5e1;
         }
 
         * {
@@ -23,6 +49,7 @@
             padding: 0;
             font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
         body {
@@ -41,7 +68,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: rgba(15, 23, 42, 0.98);
+            background-color: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(8px);
             z-index: 9999;
             display: flex;
@@ -52,7 +79,7 @@
 
         .modal-card {
             background-color: var(--bg-secondary);
-            border: 1px solid #334155;
+            border: 1px solid var(--border-color);
             border-radius: 16px;
             max-width: 520px;
             width: 100%;
@@ -78,7 +105,7 @@
         .rules-list {
             text-align: left;
             background-color: var(--bg-primary);
-            border: 1px solid #1e293b;
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 16px 20px;
             margin-bottom: 24px;
@@ -106,19 +133,19 @@
 
         .btn-enter {
             background-color: var(--accent);
-            color: white;
+            color: var(--bg-primary);
             border: none;
             padding: 14px 28px;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
-            transition: background 0.2s ease, transform 0.1s ease;
+            transition: opacity 0.2s ease, transform 0.1s ease;
             width: 100%;
         }
 
         .btn-enter:hover {
-            background-color: var(--accent-hover);
+            opacity: 0.9;
         }
 
         .btn-enter:active {
@@ -128,11 +155,13 @@
         /* Header Layout */
         header {
             background-color: var(--bg-secondary);
-            border-bottom: 1px solid #334155;
+            border-bottom: 1px solid var(--border-color);
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         header h1 {
@@ -143,6 +172,28 @@
 
         header h1 span {
             color: var(--accent);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-selector {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .theme-selector:hover {
+            border-color: var(--accent);
         }
 
         .badge-secure {
@@ -178,15 +229,15 @@
         /* Icon Grid Dashboard */
         .icon-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 20px;
         }
 
         .game-card {
             background-color: var(--bg-secondary);
-            border: 1px solid #334155;
+            border: 1px solid var(--border-color);
             border-radius: 14px;
-            padding: 20px 16px;
+            padding: 24px 16px;
             text-decoration: none;
             color: var(--text-main);
             display: flex;
@@ -206,30 +257,31 @@
         }
 
         .icon-box {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
             background-color: var(--bg-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 12px;
-            border: 1px solid #334155;
-            transition: border-color 0.2s ease;
+            margin-bottom: 14px;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.2s ease, transform 0.2s ease;
         }
 
         .game-card:hover .icon-box {
             border-color: var(--accent);
+            transform: scale(1.05);
         }
 
         .icon-box svg {
-            width: 32px;
-            height: 32px;
+            width: 34px;
+            height: 34px;
             fill: var(--accent);
         }
 
         .game-card h3 {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 600;
             margin-bottom: 4px;
         }
@@ -244,7 +296,7 @@
             padding: 30px 20px;
             color: var(--text-muted);
             font-size: 13px;
-            border-top: 1px solid #1e293b;
+            border-top: 1px solid var(--border-color);
             margin-top: 60px;
         }
     </style>
@@ -268,34 +320,95 @@
     <!-- Header Navigation -->
     <header>
         <h1>Unblocked 4s<span>.html</span></h1>
-        <div class="badge-secure">✓ Zero-Logs / No-Telemetry Verified</div>
+        <div class="header-controls">
+            <select id="themeSelector" class="theme-selector" onchange="changeTheme(this.value)">
+                <option value="theme-slate">🌙 Midnight Slate</option>
+                <option value="theme-neon">⚡ Cyber Neon</option>
+                <option value="theme-light">☀️ Clean Light</option>
+            </select>
+            <div class="badge-secure">✓ Zero Telemetry Verified</div>
+        </div>
     </header>
 
     <div class="container">
         
         <div class="section-header">
-            <h2 class="section-title">Verified Direct-Embed Game Index</h2>
+            <h2 class="section-title">Classroom 6x Verified Index</h2>
         </div>
 
-        <!-- Interactive Icon Grid using direct embed links -->
+        <!-- Interactive Icon Grid -->
         <div class="icon-grid">
             
-            <!-- Nitro Car / Verified Embed Link -->
-            <a href="https://379279291-atari-embeds.googleusercontent.com/e2c623d2-7fbc-42d7-9c9d-067bc374a3e5" target="_blank" rel="noopener noreferrer" class="game-card">
+            <!-- Nitro Car -->
+            <a href="https://sites.google.com/view/classroom6x/nitro-car?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
                 <div class="icon-box">
                     <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.76l.12.34V17z"/></svg>
                 </div>
                 <h3>Nitro Car</h3>
-                <span>Racing / 3D</span>
+                <span>Racing / Speed</span>
             </a>
 
-            <!-- Classroom 6x Main Hub -->
-            <a href="https://sites.google.com/view/classroom6x/" target="_blank" rel="noopener noreferrer" class="game-card" style="border-color: var(--accent);">
-                <div class="icon-box" style="background-color: rgba(59, 130, 246, 0.1);">
-                    <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            <!-- Car Driving -->
+            <a href="https://sites.google.com/view/classroom6x/car-driving?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
                 </div>
-                <h3>Classroom 6x</h3>
-                <span>Main Portal</span>
+                <h3>Car Driving</h3>
+                <span>Simulation / 3D</span>
+            </a>
+
+            <!-- Basket Random -->
+            <a href="https://sites.google.com/view/classroom6x/basket-random?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v3H8v2h3v3h2v-3h3V8h-3V7z"/></svg>
+                </div>
+                <h3>Basket Random</h3>
+                <span>Sports / Physics</span>
+            </a>
+
+            <!-- Snow Rider 3D -->
+            <a href="https://sites.google.com/view/classroom6x/snow-rider-3d?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Snow Rider 3D</h3>
+                <span>Winter / Arcade</span>
+            </a>
+
+            <!-- Slow Roads -->
+            <a href="https://sites.google.com/view/classroom6x/slow-roads?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1zm-9 8a6 6 0 1 1 6-6 6 6 0 0 1-6 6zm7-3h-1.14A7.9 7.9 0 0 0 17 12h1v3z"/></svg>
+                </div>
+                <h3>Slow Roads</h3>
+                <span>Relaxing / Drive</span>
+            </a>
+
+            <!-- Run 3 -->
+            <a href="https://sites.google.com/view/classroom6x/run-3?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7z"/></svg>
+                </div>
+                <h3>Run 3</h3>
+                <span>Space / Platform</span>
+            </a>
+
+            <!-- OvO -->
+            <a href="https://sites.google.com/view/classroom6x/ovo?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                </div>
+                <h3>OvO</h3>
+                <span>Platformer / Skill</span>
+            </a>
+
+            <!-- Deadly Descent -->
+            <a href="https://sites.google.com/view/classroom6x/deadly-descent?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C10.51 14.9 9 13 9 13L3 21h18L14 6z"/></svg>
+                </div>
+                <h3>Deadly Descent</h3>
+                <span>Action / Extreme</span>
             </a>
 
         </div>
@@ -316,6 +429,21 @@
                 modal.style.display = 'none';
             }, 300);
         }
+
+        // Web Theme Switcher Script
+        function changeTheme(themeName) {
+            document.body.className = themeName === 'theme-slate' ? '' : themeName;
+            localStorage.setItem('preferred_theme', themeName);
+        }
+
+        // Load saved theme preference on start
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('preferred_theme');
+            if (savedTheme) {
+                document.body.className = savedTheme === 'theme-slate' ? '' : savedTheme;
+                document.getElementById('themeSelector').value = savedTheme;
+            }
+        });
     </script>
 
 </body>
