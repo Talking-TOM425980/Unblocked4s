@@ -213,23 +213,25 @@
             flex-grow: 1;
         }
 
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
+        .row-section {
+            margin-bottom: 40px;
         }
 
-        .section-title {
-            font-size: 22px;
+        .row-title {
+            font-size: 18px;
             font-weight: 700;
             letter-spacing: -0.3px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
         }
 
-        /* Icon Grid Dashboard */
+        /* Row Grid Dashboard */
         .icon-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 20px;
         }
 
@@ -237,7 +239,7 @@
             background-color: var(--bg-secondary);
             border: 1px solid var(--border-color);
             border-radius: 14px;
-            padding: 24px 16px;
+            padding: 20px 16px;
             text-decoration: none;
             color: var(--text-main);
             display: flex;
@@ -257,14 +259,14 @@
         }
 
         .icon-box {
-            width: 64px;
-            height: 64px;
+            width: 60px;
+            height: 60px;
             border-radius: 14px;
             background-color: var(--bg-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             border: 1px solid var(--border-color);
             transition: border-color 0.2s ease, transform 0.2s ease;
         }
@@ -275,20 +277,14 @@
         }
 
         .icon-box svg {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             fill: var(--accent);
         }
 
         .game-card h3 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .game-card span {
-            font-size: 12px;
-            color: var(--text-muted);
         }
 
         footer {
@@ -332,85 +328,92 @@
 
     <div class="container">
         
-        <div class="section-header">
-            <h2 class="section-title">Classroom 6x Verified Index</h2>
+        <!-- ROW 1: RACING & DRIVING -->
+        <div class="row-section">
+            <h2 class="row-title">Racing & Driving</h2>
+            <div class="icon-grid">
+                
+                <!-- Nitro Car -->
+                <a href="https://sites.google.com/view/classroom6x/nitro-car?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.76l.12.34V17z"/></svg>
+                    </div>
+                    <h3>Nitro Car</h3>
+                </a>
+
+                <!-- Car Driving -->
+                <a href="https://sites.google.com/view/classroom6x/car-driving?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+                    </div>
+                    <h3>Car Driving</h3>
+                </a>
+
+                <!-- Slow Roads -->
+                <a href="https://sites.google.com/view/classroom6x/slow-roads?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1zm-9 8a6 6 0 1 1 6-6 6 6 0 0 1-6 6zm7-3h-1.14A7.9 7.9 0 0 0 17 12h1v3z"/></svg>
+                    </div>
+                    <h3>Slow Roads</h3>
+                </a>
+
+            </div>
         </div>
 
-        <!-- Interactive Icon Grid -->
-        <div class="icon-grid">
-            
-            <!-- Nitro Car -->
-            <a href="https://sites.google.com/view/classroom6x/nitro-car?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.76l.12.34V17z"/></svg>
-                </div>
-                <h3>Nitro Car</h3>
-                <span>Racing / Speed</span>
-            </a>
+        <!-- ROW 2: SPORTS & PHYSICS -->
+        <div class="row-section">
+            <h2 class="row-title">Sports & Physics</h2>
+            <div class="icon-grid">
+                
+                <!-- Basket Random -->
+                <a href="https://sites.google.com/view/classroom6x/basket-random?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v3H8v2h3v3h2v-3h3V8h-3V7z"/></svg>
+                    </div>
+                    <h3>Basket Random</h3>
+                </a>
 
-            <!-- Car Driving -->
-            <a href="https://sites.google.com/view/classroom6x/car-driving?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
-                </div>
-                <h3>Car Driving</h3>
-                <span>Simulation / 3D</span>
-            </a>
+                <!-- Snow Rider 3D -->
+                <a href="https://sites.google.com/view/classroom6x/snow-rider-3d?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Snow Rider 3D</h3>
+                </a>
 
-            <!-- Basket Random -->
-            <a href="https://sites.google.com/view/classroom6x/basket-random?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v3H8v2h3v3h2v-3h3V8h-3V7z"/></svg>
-                </div>
-                <h3>Basket Random</h3>
-                <span>Sports / Physics</span>
-            </a>
+            </div>
+        </div>
 
-            <!-- Snow Rider 3D -->
-            <a href="https://sites.google.com/view/classroom6x/snow-rider-3d?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                </div>
-                <h3>Snow Rider 3D</h3>
-                <span>Winter / Arcade</span>
-            </a>
+        <!-- ROW 3: ACTION & PLATFORMER -->
+        <div class="row-section">
+            <h2 class="row-title">Action & Platformer</h2>
+            <div class="icon-grid">
+                
+                <!-- Run 3 -->
+                <a href="https://sites.google.com/view/classroom6x/run-3?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7z"/></svg>
+                    </div>
+                    <h3>Run 3</h3>
+                </a>
 
-            <!-- Slow Roads -->
-            <a href="https://sites.google.com/view/classroom6x/slow-roads?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1zm-9 8a6 6 0 1 1 6-6 6 6 0 0 1-6 6zm7-3h-1.14A7.9 7.9 0 0 0 17 12h1v3z"/></svg>
-                </div>
-                <h3>Slow Roads</h3>
-                <span>Relaxing / Drive</span>
-            </a>
+                <!-- OvO -->
+                <a href="https://sites.google.com/view/classroom6x/ovo?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                    </div>
+                    <h3>OvO</h3>
+                </a>
 
-            <!-- Run 3 -->
-            <a href="https://sites.google.com/view/classroom6x/run-3?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7z"/></svg>
-                </div>
-                <h3>Run 3</h3>
-                <span>Space / Platform</span>
-            </a>
+                <!-- Deadly Descent -->
+                <a href="https://sites.google.com/view/classroom6x/deadly-descent?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C10.51 14.9 9 13 9 13L3 21h18L14 6z"/></svg>
+                    </div>
+                    <h3>Deadly Descent</h3>
+                </a>
 
-            <!-- OvO -->
-            <a href="https://sites.google.com/view/classroom6x/ovo?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
-                </div>
-                <h3>OvO</h3>
-                <span>Platformer / Skill</span>
-            </a>
-
-            <!-- Deadly Descent -->
-            <a href="https://sites.google.com/view/classroom6x/deadly-descent?authuser=0" target="_blank" rel="noopener noreferrer" class="game-card">
-                <div class="icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C10.51 14.9 9 13 9 13L3 21h18L14 6z"/></svg>
-                </div>
-                <h3>Deadly Descent</h3>
-                <span>Action / Extreme</span>
-            </a>
-
+            </div>
         </div>
 
     </div>
