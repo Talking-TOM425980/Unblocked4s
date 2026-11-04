@@ -17,6 +17,8 @@
             --success: #22c55e;
             --card-hover: #334155;
             --border-color: #334155;
+            --banner-bg: rgba(59, 130, 246, 0.1);
+            --banner-border: rgba(59, 130, 246, 0.3);
         }
 
         body.theme-neon {
@@ -29,6 +31,8 @@
             --success: #00ff66;
             --card-hover: #1f1f1f;
             --border-color: #222222;
+            --banner-bg: rgba(0, 255, 204, 0.1);
+            --banner-border: rgba(0, 255, 204, 0.3);
         }
 
         body.theme-light {
@@ -41,6 +45,8 @@
             --success: #16a34a;
             --card-hover: #f1f5f9;
             --border-color: #cbd5e1;
+            --banner-bg: rgba(37, 99, 235, 0.08);
+            --banner-border: rgba(37, 99, 235, 0.2);
         }
 
         * {
@@ -61,95 +67,24 @@
             overflow-x: hidden;
         }
 
-        /* Academic Disclaimer Modal */
-        #disclaimer-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(8px);
-            z-index: 9999;
+        /* Friendly Top Banner */
+        .reminder-banner {
+            background-color: var(--banner-bg);
+            border-bottom: 1px solid var(--banner-border);
+            padding: 12px 24px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            padding: 20px;
-        }
-
-        .modal-card {
-            background-color: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            max-width: 520px;
-            width: 100%;
-            padding: 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-
-        .modal-card h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: var(--text-main);
-        }
-
-        .modal-card p {
-            color: var(--text-muted);
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
-
-        .rules-list {
-            text-align: left;
-            background-color: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin-bottom: 24px;
-            list-style: none;
-        }
-
-        .rules-list li {
+            justify-content: center;
+            gap: 12px;
             font-size: 14px;
-            margin-bottom: 12px;
+            font-weight: 500;
+            text-align: center;
             color: var(--text-main);
-            display: flex;
-            align-items: flex-start;
         }
 
-        .rules-list li::before {
-            content: "✓";
-            color: var(--success);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .rules-list li:last-child {
-            margin-bottom: 0;
-        }
-
-        .btn-enter {
-            background-color: var(--accent);
-            color: var(--bg-primary);
-            border: none;
-            padding: 14px 28px;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: opacity 0.2s ease, transform 0.1s ease;
-            width: 100%;
-        }
-
-        .btn-enter:hover {
-            opacity: 0.9;
-        }
-
-        .btn-enter:active {
-            transform: scale(0.98);
+        .reminder-banner span {
+            color: var(--accent);
+            font-weight: 600;
         }
 
         /* Header Layout */
@@ -301,18 +236,9 @@
 </head>
 <body>
 
-    <!-- Student Agreement Overlay -->
-    <div id="disclaimer-modal">
-        <div class="modal-card">
-            <h2>Student Digital Responsibility Agreement</h2>
-            <p>Accessing entertainment platforms on school infrastructure requires responsible academic time management.</p>
-            <ul class="rules-list">
-                <li>I verify that all active classroom tasks, homework, and core school assignments are completely finished.</li>
-                <li>I will respect classroom environments and close this platform immediately when instructional time begins.</li>
-                <li>I agree to use this platform in alignment with standard student netiquette and acceptable use rules.</li>
-            </ul>
-            <button class="btn-enter" onclick="acceptAgreement()">I Agree - Enter Site</button>
-        </div>
+    <!-- Friendly Top Reminder Banner -->
+    <div class="reminder-banner">
+        <span>👋 Friendly Reminder:</span> Make sure your homework is done and class time is respected before jumping in! Have fun! ✨
     </div>
 
     <!-- Header Navigation -->
@@ -417,16 +343,6 @@
     </footer>
 
     <script>
-        // Dismisses agreement modal
-        function acceptAgreement() {
-            const modal = document.getElementById('disclaimer-modal');
-            modal.style.transition = 'opacity 0.3s ease';
-            modal.style.opacity = '0';
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
-        }
-
         // Web Theme Switcher Script
         function changeTheme(themeName) {
             document.body.className = themeName === 'theme-slate' ? '' : themeName;
