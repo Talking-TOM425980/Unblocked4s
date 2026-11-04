@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Strict Content Security Policy (CSP): Forces HTTPS, restricts sources, blocks unauthorized inline scripts & object embeds -->
+    <!-- Strict Content Security Policy: Forces HTTPS, restricts sources, blocks unauthorized scripts -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https:; form-action 'none'; object-src 'none';">
     <title>Unblocked 4s Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -165,7 +165,7 @@
             letter-spacing: -0.3px;
         }
 
-        /* Grid for Unblocked Directory Cards */
+        /* Grid for Approved Resource Cards */
         .grid-links {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -322,39 +322,39 @@
 
     <div class="container">
         
-        <!-- Verified Directory Section -->
-        <h2 class="section-title">Verified Unblocked Directories</h2>
+        <!-- Verified Educational & Open-Source Directory Section -->
+        <h2 class="section-title">Open-Source & Educational Directories</h2>
         <div class="grid-links">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="card-link">
                 <div>
-                    <h3>GitHub Pages Index</h3>
-                    <p>Access community-built static HTML5 files and games hosted directly via open-source repositories.</p>
+                    <h3>GitHub Open Source Index</h3>
+                    <p>Access community-built static HTML5 repositories and public code indices safely.</p>
                 </div>
                 <div class="action-text">Launch External Site →</div>
             </a>
-            <a href="https://github.io" target="_blank" rel="noopener noreferrer" class="card-link">
+            <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" class="card-link">
                 <div>
-                    <h3>Static Web Game Index</h3>
-                    <p>Educational and web arcade sandboxes designed to run inside browser filters safely.</p>
+                    <h3>MDN Web Sandbox</h3>
+                    <p>Explore official web technology tutorials, canvas samples, and interactive JavaScript demos.</p>
                 </div>
                 <div class="action-text">Launch External Site →</div>
             </a>
-            <a href="https://crazygames.com" target="_blank" rel="noopener noreferrer" class="card-link">
+            <a href="https://idev.games" target="_blank" rel="noopener noreferrer" class="card-link">
                 <div>
-                    <h3>CrazyGames Directory</h3>
-                    <p>A catalog of WebGL and HTML5 arcade modules operating over secure HTTPS connections.</p>
+                    <h3>iDev Indie Arcade</h3>
+                    <p>A clean repository of lightweight, independent HTML5 browser modules built for general web views.</p>
                 </div>
                 <div class="action-text">Launch External Site →</div>
             </a>
         </div>
 
-        <!-- Sandboxed Local Arcade Environment -->
+        <!-- Sandboxed Local Arcade Environment using clean, embeddable open-source engine sources -->
         <h2 class="section-title">Local Arcade Environment (Sandboxed)</h2>
         <div class="arcade-container">
             <div class="arcade-controls">
-                <button class="btn-game" data-url="https://playcanv.as/p/2OwybvLu/">Arcade Stream 1 (3D Flight)</button>
-                <button class="btn-game" data-url="https://playcanv.as/p/a30acb2c/">Arcade Stream 2 (Space Simulation)</button>
-                <button class="btn-game" data-url="https://playcanv.as/p/JS9BWgKG/">Arcade Stream 3 (Physics Sandbox)</button>
+                <button class="btn-game" data-url="https://iDev.Games/embed/super-bounce-ball-maze">Sandbox App 1 (Maze Physics)</button>
+                <button class="btn-game" data-url="https://playcanv.as/p/2OwybvLu/">Sandbox App 2 (3D Simulation)</button>
+                <button class="btn-game" data-url="https://playcanv.as/p/JS9BWgKG/">Sandbox App 3 (Interactive Logic)</button>
             </div>
 
             <div class="viewport-wrapper">
